@@ -1,0 +1,26 @@
+Conclusiones del Análisis Inmobiliario de Bogotá
+¿Cuál fue el desempeño del modelo?
+El modelo múltiple tiene un rendimiento moderadamente bueno con un  R2≈0.6061  en el conjunto de prueba,
+lo que significa que el modelo explica aproximadamente el 60.6% de la variabilidad de los precios de los
+inmuebles en Bogotá empleando únicamente el área, el número de habitaciones y el de baños.
+
+¿Qué variable fue la más influyente según los coeficientes del modelo?
+La variable con mayor peso absoluto fue Baños con un impacto positivo de + 87,056,482.11COP∗∗porcadabañoadicional
+,seguidadecercaporel∗∗Área∗∗con∗∗+ 4,558,697.65 COP por metro cuadrado. Por otro lado, la variable Habitaciones 
+presentó una influencia negativa de -$63,815,973.69 COP, lo que estadísticamente sugiere que a igual área construida,
+un exceso de subdivisiones (habitaciones más pequeñas) tiende a castigar el precio en el mercado inmobiliario.
+
+¿Las features extraídas del dataset fueron buenas predictoras? ¿Se sugieren otras? Las features físicas básicas 
+(Área, Habitaciones, Baños) demostraron ser predictoras estables y representativas (60.6% de explicación). 
+Sin embargo, para mejorar el desempeño del modelo se sugiere integrar variables de ubicación que capturen el
+estrato socioeconómico o sector, tales como la UPZ o el Barrio codificados de forma categórica, además de la 
+presencia de parqueaderos y la antigüedad del inmueble.
+
+Comparativa de resultados de evaluación del modelo con los datos de Entrenamiento y de Test:
+
+R² Entrenamiento: 0.5833 vs. R² Test: 0.6061.
+RMSE Entrenamiento: $423,803,506.70 COP vs. RMSE Test: $417,621,080.05 COP. 
+Los resultados en el set de prueba son ligeramente superiores pero muy estables en comparación con
+el set de entrenamiento. La cercanía entre las métricas de ambos conjuntos indica que el modelo no 
+sufre de sobreajuste (overfitting) y generaliza correctamente ante nuevos datos.
+
